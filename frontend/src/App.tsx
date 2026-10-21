@@ -1,6 +1,7 @@
 import './App.css'
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {StoryLoader} from "./components/StoryLoader";
+import {StoryGenerator} from "./components/StoryGenerator";
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
           </header>
           <main>
             <Routes>
+              <Route path={"/"} element={<StoryGenerator/>}/>
               <Route path={"/story/:id"} element={<StoryLoader/>} />
             </Routes>
           </main>
